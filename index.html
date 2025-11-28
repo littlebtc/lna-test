@@ -4,10 +4,18 @@
     <title>LNA Test</title>
     <meta charset="UTF-8" />
   </head>
-
+  <script type="text/javascript">
+    const go = () => {
+      const frame = document.createElement("iframe");
+      frame.srcdoc = `
+        <html>
+          <head><script src="https://localhost:9876/test.mjs" type="module"></script></head>
+        </html>
+      `
+      document.body.appendChild(frame);
+    }
+  </script>
   <body>
-    <iframe>
-      <script src="https://localhost:9876/qq.mjs" type="module"></script>
-    </iframe>
+    <button>Go</button>
   </body>
 </html>
